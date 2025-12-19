@@ -10,7 +10,7 @@ require_once __DIR__ . '/config/config.php';
     <meta name="keywords" content="penegakan hukum, kementerian, lingkungan hidup, Indonesia">
     <title>GAKKUM LH</title>
 
-    <!-- Google Font kakakak --> 
+    <!-- Google Font edit  fttahhh --> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
