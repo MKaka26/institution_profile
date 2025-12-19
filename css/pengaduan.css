@@ -1,0 +1,230 @@
+.page-header {
+    background: url('../assets/images/slide1.jpeg') no-repeat center center / cover;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: var(--nav-height);
+    color: #fff;
+}
+
+.page-header .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.7);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 16px;
+    color: #e5e7eb;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bg-light {
+    background: #f8fafc;
+}
+
+.two-column {
+    display: block !important;
+}
+
+.info-side,
+.form-side {
+    width: 100% !important;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-side {
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.check-list li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.gakkum-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #cbd5f5;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+
+/* ===============================
+   TRACKING
+================================ */
+.tracking-box {
+    max-width: 500px;
+    margin: 30px auto 0;
+    display: flex;
+    gap: 12px;
+}
+
+.tracking-box input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #cbd5f5;
+}
+
+.tracking-box button {
+    padding: 0 24px;
+    border-radius: 8px;
+    border: none;
+    background: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* ===============================
+   LAYANAN
+================================ */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card.text-center {
+    text-align: center;
+}
+
+.icon-service {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.link-action {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .tracking-box {
+        flex-direction: column;
+    }
+
+    .header-content h1 {
+        font-size: 28px;
+    }
+}

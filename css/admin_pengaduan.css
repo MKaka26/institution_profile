@@ -1,0 +1,159 @@
+.page-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.admin-table thead {
+    background: #f1f5f9;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 12px 14px;
+    font-weight: 600;
+    color: #334155;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #1f2937;
+}
+
+.admin-table tr:hover {
+    background: #f8fafc;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status.masuk {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.status.proses {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status.selesai {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn.detail {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn.detail:hover {
+    background: #1d4ed8;
+}
+
+.btn.delete {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.btn.delete:hover {
+    background: #fecaca;
+}
+
+.btn.primary {
+    background: var(--secondary);
+    color: #fff;
+    margin-top: 12px;
+}
+
+.btn.primary:hover {
+    background: #1e40af;
+}
+
+/* DETAIL BOX */
+.detail-box {
+    margin-top: 16px;
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.detail-box p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.detail-box strong {
+    color: #0f172a;
+}
+
+.detail-box label {
+    display: block;
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.detail-box select {
+    width: 220px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 13px;
+    margin-top: 6px;
+    background: #fff;
+}
+
+/* FILE LINK */
+.file-link {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.file-link:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .admin-table {
+        font-size: 13px;
+    }
+
+    .detail-box {
+        padding: 16px;
+    }
+
+    .detail-box select {
+        width: 100%;
+    }
+}
