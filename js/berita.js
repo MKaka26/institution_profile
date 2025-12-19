@@ -91,4 +91,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    document.getElementById("imageUpload").addEventListener("change", function () {
+    const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
+    const file = this.files[0];
+
+    if (file && !allowedTypes.includes(file.type)) {
+        alert("Format gambar harus JPG, PNG, atau WEBP");
+        this.value = "";
+        document.getElementById("fileInfo").textContent = "Belum ada file dipilih";
+    }
+});
+
+document.getElementById("imageUpload").addEventListener("change", function () {
+    const file = this.files[0];
+    const info = document.getElementById("fileInfo");
+
+    if (!file) return;
+
+    const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
+    const maxSize = 2 * 1024 * 1024; // 2MB
+
+    if (!allowedTypes.includes(file.type)) {
+        alert("Format gambar harus JPG, PNG, atau WEBP");
+        this.value = "";
+        info.textContent = "Belum ada file dipilih";
+        return;
+    }
+
+    if (file.size > maxSize) {
+        alert("Ukuran gambar maksimal 2 MB");
+        this.value = "";
+        info.textContent = "Belum ada file dipilih";
+        return;
+    }
+
+    // cek rasio
+    const img = new Image();
+    img.onload = function () {
+        const ratio = this.width / this.height;
+        const ideal = 16 / 9;
+
+        if (Math.abs(ratio - ideal) > 0.05) {
+            alert("Rasio gambar harus 16:9 (contoh 1200x630)");
+            document.getElementById("imageUpload").value = "";
+            info.textContent = "Belum ada file dipilih";
+        } else {
+            info.textContent = "File dipilih: " + file.name;
+        }
+    };
+
+    img.src = URL.createObjectURL(file);
+});
+
 });

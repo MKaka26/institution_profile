@@ -10,7 +10,7 @@
                 <img src="<?= $base_url ?>/assets/icons/new_KLH_GAKKUM.png" alt="Logo GAKKUM LH dan KLH">
             </a>
             <div class="logo-text">
-                <span>Balai Gakkum LH Wilayah Sumatera</span>
+                <span>Balai GakKum LH Wilayah Sumatera</span>
                 <strong>SEKSI WILAYAH II PALEMBANG</strong>
             </div>
         </div>

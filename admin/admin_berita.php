@@ -23,6 +23,7 @@ require_once __DIR__ . '/../config/config.php';
 
         <?php include __DIR__ . '/partials/topbar.php'; ?>
 
+        <!-- ================= TABLE ================= -->
         <section class="content-box">
             <div class="toolbar">
                 <h2 class="page-title">Manajemen Berita</h2>
@@ -34,7 +35,7 @@ require_once __DIR__ . '/../config/config.php';
                         <th>No</th>
                         <th>Judul Berita</th>
                         <th>Tanggal</th>
-                        <th>Status</th>
+                        <th>Kategori</th>
                         <th width="140">Aksi</th>
                     </tr>
                 </thead>
@@ -43,7 +44,7 @@ require_once __DIR__ . '/../config/config.php';
                         <td>1</td>
                         <td>Penindakan Kasus Pencemaran Sungai</td>
                         <td><?= date('Y-m-d') ?></td>
-                        <td><span class="status publish">Publish</span></td>
+                        <td>Siaran Pers</td>
                         <td>
                             <div class="action-btns">
                                 <button class="btn btn-warning">Edit</button>
@@ -56,7 +57,20 @@ require_once __DIR__ . '/../config/config.php';
                         <td>2</td>
                         <td>Sosialisasi Hukum Lingkungan di Palembang</td>
                         <td><?= date('Y-m-d') ?></td>
-                        <td><span class="status draft">Draft</span></td>
+                        <td>Berita</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="btn btn-warning">Edit</button>
+                                <button class="btn btn-danger">Hapus</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Sosialisasi Hukum Lingkungan di Palembang</td>
+                        <td><?= date('Y-m-d') ?></td>
+                        <td>Kegiatan</td>
                         <td>
                             <div class="action-btns">
                                 <button class="btn btn-warning">Edit</button>
@@ -68,7 +82,7 @@ require_once __DIR__ . '/../config/config.php';
             </table>
         </section>
 
-        <!-- FORM -->
+        <!-- ================= FORM ================= -->
         <section class="content-box">
             <div class="form-box">
                 <h3>Tambah Berita</h3>
@@ -83,17 +97,65 @@ require_once __DIR__ . '/../config/config.php';
                     <textarea rows="5" placeholder="Isi berita..."></textarea>
                 </div>
 
-                <div class="form-group">
-                    <label>Gambar Berita</label>
-                    <input type="file" accept="image/*" onchange="showFileName(this)">
-                    <div class="file-info" id="fileInfo">Belum ada file dipilih</div>
+                <!-- ===== SUMBER GAMBAR ===== -->
+                <div class="form-group image-source-box">
+                    <label>Sumber Gambar</label>
+
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="image_type" value="upload" checked>
+                            Upload Gambar
+                        </label>
+
+                        <label>
+                            <input type="radio" name="image_type" value="link">
+                            Link Gambar
+                        </label>
+                    </div>
+
+                    <div class="image-source-content">
+
+                        <div class="file-info image-hint">
+                            Format: JPG, PNG, WEBP • Maks 2MB • Rasio 16:9 (1200×630)
+                        </div>
+
+                        <!-- UPLOAD -->
+                        <div id="uploadGroup">
+                            <label class="sub-label">Upload Gambar Berita</label>
+                            <input 
+                                type="file"
+                                id="imageUpload"
+                                accept=".jpg,.jpeg,.png,.webp"
+                            >
+                            <div class="file-info" id="uploadInfo">
+                                Belum ada file dipilih
+                            </div>
+                        </div>
+
+                        <!-- LINK -->
+                        <div id="linkGroup" style="display:none;">
+                            <label class="sub-label">Link Gambar</label>
+                            <input 
+                                type="url"
+                                id="imageLink"
+                                placeholder="https://example.com/gambar.jpg"
+                            >
+                        </div>
+
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Status</label>
+                    <label>Link Berita (opsional)</label>
+                    <input type="url" placeholder="Link berita...">
+                </div>
+                
+                <div class="form-group">
+                    <label>Kategori</label>
                     <select>
-                        <option>Publish</option>
-                        <option>Draft</option>
+                        <option>Berita</option>
+                        <option>Siaran Pers</option>
+                        <option>Kegiatan</option>
                     </select>
                 </div>
 
@@ -105,14 +167,7 @@ require_once __DIR__ . '/../config/config.php';
 </div>
 
 <script src="<?= $base_url ?>js/admin_dashboard.js"></script>
-<script>
-function showFileName(input) {
-    const info = document.getElementById('fileInfo');
-    info.textContent = input.files.length
-        ? 'File dipilih: ' + input.files[0].name
-        : 'Belum ada file dipilih';
-}
-</script>
+<script src="<?= $base_url ?>js/admin_berita.js"></script>
 
 </body>
 </html>

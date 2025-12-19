@@ -24,7 +24,7 @@ require_once __DIR__ . '/config/config.php';
     <!-- Hero Section -->
     <section class="hero">
         <div class="slides">
-            <img src="<?= $base_url ?>/assets/images/slide1.jpeg" class="slide active" alt="Slide 1">
+            <img src="<?= $base_url ?>/assets/images/slide1.jpg" class="slide active" alt="Slide 1">
             <img src="<?= $base_url ?>assets/images/slide2.jpg" class="slide" alt="Slide 2">
             <img src="<?= $base_url ?>assets/images/slide3.jpg" class="slide" alt="Slide 3">
         </div>

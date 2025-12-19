@@ -1,8 +1,8 @@
 <aside class="sidebar">
     <div class="sidebar-header">
         <h2>ADMIN</h2>
-        <span>BALAI GAKKUM LH WILAYAH SUMATERA</span><br>
-        <span>Seksi Wilayah II Palembang</span>
+        <span>Balai GakKum LH Wilayah Sumatera</span><br>
+        <strong>SEKSI WILAYAH II PALEMBANG</strong>
     </div>
 
     <nav class="sidebar-menu">

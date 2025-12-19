@@ -35,7 +35,6 @@ require_once __DIR__ . '/../config/config.php';
                         <th>Preview</th>
                         <th>Judul</th>
                         <th>Tanggal</th>
-                        <th>Status</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -47,7 +46,6 @@ require_once __DIR__ . '/../config/config.php';
                         </td>
                         <td>Operasi Penindakan Limbah</td>
                         <td><?= date('Y-m-d') ?></td>
-                        <td><span class="status publish">Publish</span></td>
                         <td>
                             <button class="btn edit">Edit</button>
                             <button class="btn delete">Hapus</button>
@@ -60,7 +58,6 @@ require_once __DIR__ . '/../config/config.php';
                         </td>
                         <td>Sosialisasi Lingkungan</td>
                         <td><?= date('Y-m-d') ?></td>
-                        <td><span class="status draft">Draft</span></td>
                         <td>
                             <button class="btn edit">Edit</button>
                             <button class="btn delete">Hapus</button>
@@ -80,12 +77,6 @@ require_once __DIR__ . '/../config/config.php';
 
                 <label>Upload Foto</label>
                 <input type="file" accept="image/*">
-
-                <label>Status</label>
-                <select>
-                    <option value="publish">Publish</option>
-                    <option value="draft">Draft</option>
-                </select>
 
                 <button type="submit" class="btn primary">Simpan Foto</button>
             </form>

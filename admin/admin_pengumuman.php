@@ -36,7 +36,6 @@ require_once __DIR__ . '/../config/config.php';
                         <th>Judul Pengumuman</th>
                         <th>Tanggal</th>
                         <th>Dokumen</th>
-                        <th>Status</th>
                         <th width="140">Aksi</th>
                     </tr>
                 </thead>
@@ -46,7 +45,6 @@ require_once __DIR__ . '/../config/config.php';
                         <td>Pemberitahuan Libur Nasional</td>
                         <td><?= date('Y-m-d') ?></td>
                         <td>libur_nasional.pdf</td>
-                        <td><span class="status publish">Publish</span></td>
                         <td>
                             <div class="action-btns">
                                 <button class="btn btn-warning">Edit</button>
@@ -60,7 +58,6 @@ require_once __DIR__ . '/../config/config.php';
                         <td>Pengumuman Rekrutmen</td>
                         <td><?= date('Y-m-d') ?></td>
                         <td>rekrutmen.docx</td>
-                        <td><span class="status draft">Draft</span></td>
                         <td>
                             <div class="action-btns">
                                 <button class="btn btn-warning">Edit</button>
@@ -82,22 +79,9 @@ require_once __DIR__ . '/../config/config.php';
                 </div>
 
                 <div class="form-group">
-                    <label>Isi Pengumuman</label>
-                    <textarea rows="4" placeholder="Isi pengumuman..."></textarea>
-                </div>
-
-                <div class="form-group">
                     <label>Upload Dokumen</label>
                     <input type="file" accept=".pdf,.doc,.docx" onchange="showDocName(this)">
                     <div class="file-info" id="docInfo">Belum ada dokumen dipilih</div>
-                </div>
-
-                <div class="form-group">
-                    <label>Status</label>
-                    <select>
-                        <option>Publish</option>
-                        <option>Draft</option>
-                    </select>
                 </div>
 
                 <button class="btn btn-primary">Simpan Pengumuman</button>
