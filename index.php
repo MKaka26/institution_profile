@@ -10,7 +10,7 @@ require_once __DIR__ . '/config/config.php';
     <meta name="keywords" content="penegakan hukum, kementerian, lingkungan hidup, Indonesia">
     <title>GAKKUM LH</title>
 
-    <!-- Google Font edit  fttahhh --> 
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
@@ -25,15 +25,15 @@ require_once __DIR__ . '/config/config.php';
     <section class="hero">
         <div class="slides">
             <img src="<?= $base_url ?>/assets/images/slide1.jpeg" class="slide active" alt="Slide 1">
-            <img src="<?= $base_url ?>assets/images/slide2.jpeg" class="slide" alt="Slide 2">
-            <img src="<?= $base_url ?>assets/images/slide3.png" class="slide" alt="Slide 3">
+            <img src="<?= $base_url ?>assets/images/slide2.jpg" class="slide" alt="Slide 2">
+            <img src="<?= $base_url ?>assets/images/slide3.jpg" class="slide" alt="Slide 3">
         </div>
 
         <div class="overlay"></div>
 
         <div class="hero-content">
             <h1>Balai Penegakan Hukum Lingkungan Hidup Wilayah Sumatera</h1>
-            <p>Seksi Wilayah II Palembang</p>
+            <p>SEKSI WILAYAH II PALEMBANG</p>
 
             <div class="search-box">
                 <input type="text" placeholder="Cari..." aria-label="Pencarian">
@@ -60,16 +60,19 @@ require_once __DIR__ . '/config/config.php';
             <div class="vision-box">
                 <h2>Visi</h2>
                 <p>
-                    Terwujudnya lingkungan hidup yang berkelanjutan dan berkeadilan.
+                    "Terwujudnya penegakan hukum lingkungan hidup yang kuat, adil, dan efektif guna melindungi lingkungan hidup serta menjamin pembangunan keberlanjutan."
                 </p>
             </div>
 
             <div class="mission-box">
                 <h2>Misi</h2>
                 <ul>
-                    <li>Meningkatkan kualitas lingkungan hidup</li>
-                    <li>Pengendalian pencemaran dan kerusakan lingkungan</li>
-                    <li>Penegakan hukum lingkungan</li>
+                    <li>Meningkatkan kepatuhan pelaku usaha dan kegiatan terhadap peraturan perundang-undangan di bidang lingkungan hidup.</li>
+                    <li>Melaksanakan pengawasan dan penindakan hukum lingkungan hidup secara profesional, transparan, dan berkeadilan.</li>
+                    <li>Menegakkan sanksi administratif, perdata, dan pidana lingkungan hidup secara konsisten untuk memberikan efek jera.</li>
+                    <li>Memperkuat koordinasi penegakan hukum lingkungan hidup dengan aparat penegak hukum dan pemangku kepentingan terkait.</li>
+                    <li>Meningkatkan kapasitas kelembagaan dan sumber daya manusia penegakan hukum lingkungan hidup, termasuk di tingkat wilayah (Balai Gakkum LH).</li>
+                    <li>Meningkatkan kapasitas kelembagaan dan sumber daya manusia penegakan hukum lingkungan hidup, termasuk di tingkat wilayah (Balai Gakkum LH).</li>
                 </ul>
             </div>
 
