@@ -1,4 +1,4 @@
-# Company Profile Website
+# Company Profile Website (On Going)
 
 ## Description
 Website profile company sederhana yang dibuat sebagai project perkuliahan.
