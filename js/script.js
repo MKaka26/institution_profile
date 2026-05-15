@@ -138,7 +138,7 @@ const initSearch = () => {
 // =====================================
 
 const initScrollReveal = () => {
-    const revealElements = document.querySelectorAll('.card, .news-card, .stat-box, .vision-box, .mission-box');
+    const revealElements = document.querySelectorAll('.card, .news-card, .stat-box, .vision-box, .mission-box,  .tf-box, #tentang p');
     
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
@@ -268,3 +268,5 @@ const debounce = (func, wait = 20) => {
         timeout = setTimeout(later, wait);
     };
 };
+
+

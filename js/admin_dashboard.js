@@ -8,17 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const sidebar = document.querySelector('.sidebar');
-    const toggleBtn = document.createElement('button');
-    toggleBtn.innerHTML = '☰';
-    toggleBtn.className = 'sidebar-toggle';
-
-    document.querySelector('.topbar').prepend(toggleBtn);
-
-    toggleBtn.addEventListener('click', () => {
-        sidebar.classList.toggle('show');
-    });
-
     const statCards = document.querySelectorAll('.stat-card');
 
     statCards.forEach(card => {
