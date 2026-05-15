@@ -1,0 +1,343 @@
+/* ================================
+   HALAMAN PENGUMUMAN
+================================ */
+
+/* Layout wrapper */
+.pengumuman-layout {
+    grid-template-columns: 4fr 1fr;
+}
+
+/* Jika tidak pakai sidebar → otomatis 1 kolom */
+.no-sidebar .pengumuman-layout {
+    grid-template-columns: 1fr;
+}
+
+/* ================================
+   GRID DAFTAR PENGUMUMAN
+================================ */
+.pengumuman-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .pengumuman-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .pengumuman-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================
+   CARD PENGUMUMAN
+================================ */
+
+.pengumuman-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    transition: .25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.pengumuman-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+/* Gambar Card */
+.pengumuman-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Konten Card */
+.pengumuman-content {
+    padding: 20px 22px;
+}
+
+.pengumuman-date {
+    font-size: 13px;
+    color: #007B8F;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.pengumuman-card h3 {
+    font-size: 19px;
+    color: #1f2937;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    min-height: 48px;
+}
+
+.pengumuman-card p {
+    font-size: 15px;
+    color: #4b5563;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    height: 68px;
+    overflow: hidden;
+}
+
+/* Tombol Baca Selengkapnya */
+.btn-read {
+    padding: 10px 14px;
+    background: #007B8F;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    transition: .25s ease;
+}
+
+.btn-read:hover {
+    background: #005F69;
+}
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.pengumuman-sidebar .sidebar-box {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    margin-bottom: 25px;
+}
+
+.pengumuman-sidebar h4 {
+    font-size: 18px;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.pengumuman-sidebar input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+.pengumuman-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pengumuman-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.pengumuman-sidebar ul li a {
+    color: #007B8F;
+    font-size: 15px;
+}
+
+.pengumuman-sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media(max-width: 992px) {
+    .pengumuman-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+    .pengumuman-card img {
+        height: 160px;
+    }
+}
+
+/* WRAPPER HEADER */
+.pengumuman-header {
+    padding: 70px 0;
+    border-bottom: none;
+
+    background: linear-gradient(
+        135deg,
+        rgba(29, 78, 216, 0.9),
+        rgba(15, 23, 42, 0.9)
+    );
+
+    color: #ffffff;
+}
+
+.pengumuman-header .header-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+/* TEKS KIRI */
+.pengumuman-header .header-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pengumuman-header .header-text p {
+    font-size: 16px;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+/* BOX SEARCH KANAN */
+.header-search-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    padding: 22px;
+    border-radius: 18px;
+    width: 350px;
+
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(20px);
+}
+
+.header-search-box h4 {
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.header-search-box input {
+    width: 100%;
+    padding: 12px 14px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.header-search-box input::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
+.header-search-box input:focus {
+    background: rgba(255,255,255,0.3);
+    border-color: #fff;
+    outline: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .pengumuman-header .header-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .header-search-box {
+        width: 100%;
+    }
+}
+
+.btn-baca {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-baca:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.back-wrapper{
+    margin-top: 40px;
+}
+
+.btn-back{
+    display: inline-block;
+    padding: 6px 10px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 7px;
+    font-weight: 250;
+    text-decoration: none;
+}
+
+/* ===============================
+   PAGINATION (SAMA DENGAN BERITA)
+================================ */
+
+.pagination-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination a {
+    padding: 10px 16px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d3557;
+    transition: all 0.2s ease;
+}
+
+.pagination a:hover {
+    background: #1d3557;
+    color: #ffffff;
+}
+
+.pagination a.active {
+    background: #1d3557;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.pagination a.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}

@@ -1,44 +1,114 @@
-.page-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
+/* ===============================
+   ADMIN PENGADUAN - CLEAN STYLE
+   (Selaras dengan admin_pengumuman.css)
+   =============================== */
+
+/* WRAPPER CONTENT */
+.content-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 30px;
 }
 
-.admin-table {
+/* Title */
+.page-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #1d3557;
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.toolbar select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #cfd3d8;
+    background: #fafafa;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.toolbar select:focus {
+    border-color: #1d3557;
+    background: #ffffff;
+}
+
+/* ===============================
+   TABLE STYLING
+   =============================== */
+
+.admin-table,
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+.admin-table thead,
+table thead {
+    background: #1d3557;
+    color: #fff;
+}
+
+.admin-table th,
+table th {
+    padding: 12px;
     font-size: 14px;
-}
-
-.admin-table thead {
-    background: #f1f5f9;
-}
-
-.admin-table th {
+    font-weight: 500;
     text-align: left;
-    padding: 12px 14px;
+}
+
+.admin-table tbody tr,
+table tbody tr {
+    border-bottom: 1px solid #ececec;
+    transition: background 0.2s ease;
+}
+
+.admin-table tbody tr:hover,
+table tbody tr:hover {
+    background: #f4f7fb;
+}
+
+.admin-table td,
+table td {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+.admin-table thead th {
+    text-align: center;
+    vertical-align: middle;
     font-weight: 600;
-    color: #334155;
-    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
 }
 
-.admin-table td {
-    padding: 12px 14px;
-    border-bottom: 1px solid #e5e7eb;
-    color: #1f2937;
-}
-
-.admin-table tr:hover {
-    background: #f8fafc;
-}
+/* ===============================
+   STATUS BADGES
+   =============================== */
 
 .status {
-    padding: 4px 10px;
+    padding: 6px 12px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
     display: inline-block;
+    text-transform: capitalize;
 }
 
 .status.masuk {
@@ -46,9 +116,14 @@
     color: #0369a1;
 }
 
-.status.proses {
+.status.verifikasi-admin {
     background: #fef3c7;
     color: #92400e;
+}
+
+.status.verifikasi-lapangan {
+    background: #ffedd5;
+    color: #9a3412;
 }
 
 .status.selesai {
@@ -56,104 +131,448 @@
     color: #166534;
 }
 
-.btn {
-    padding: 10px 16px;
-    border-radius: 6px;
-    border: none;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.btn.detail {
-    background: #2563eb;
-    color: #fff;
-}
-
-.btn.detail:hover {
-    background: #1d4ed8;
-}
-
-.btn.delete {
+.status.ditolak {
     background: #fee2e2;
     color: #b91c1c;
 }
 
-.btn.delete:hover {
-    background: #fecaca;
-}
+/* ===============================
+   BUTTONS
+   =============================== */
 
-.btn.primary {
-    background: var(--secondary);
-    color: #fff;
-    margin-top: 12px;
-}
-
-.btn.primary:hover {
-    background: #1e40af;
-}
-
-/* DETAIL BOX */
-.detail-box {
-    margin-top: 16px;
-    background: #f9fafb;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #e5e7eb;
-}
-
-.detail-box p {
-    font-size: 14px;
-    margin-bottom: 8px;
-    line-height: 1.6;
-}
-
-.detail-box strong {
-    color: #0f172a;
-}
-
-.detail-box label {
-    display: block;
-    margin-top: 14px;
+.btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
     font-size: 13px;
-    font-weight: 600;
-    color: #334155;
-}
-
-.detail-box select {
-    width: 220px;
-    padding: 8px 10px;
-    border-radius: 6px;
-    border: 1px solid #d1d5db;
-    font-size: 13px;
-    margin-top: 6px;
-    background: #fff;
-}
-
-/* FILE LINK */
-.file-link {
+    border: none;
+    transition: 0.2s ease-in-out;
     display: inline-block;
-    margin-top: 6px;
-    font-size: 13px;
-    color: #2563eb;
+    text-align: center;
     text-decoration: none;
 }
 
+.btn.detail,
+.btn.primary,
+.btn-primary {
+    background: #1d3557;
+    color: #fff;
+}
+
+.btn.detail:hover,
+.btn.primary:hover,
+.btn-primary:hover {
+    background: #16324a;
+}
+
+.btn.delete,
+.btn-danger {
+    background: #e63946;
+    color: #fff;
+}
+
+.btn.delete:hover,
+.btn-danger:hover {
+    background: #c71f2a;
+}
+
+.btn-warning {
+    background: #ffb703;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background: #e09b00;
+}
+
+.btn-cancel {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background: #5a636a;
+}
+
+/* ===============================
+   PAGINATION STYLING
+   =============================== */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.pg-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #f9fafb;
+    color: #1d3557;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.pg-btn:hover {
+    background: #1d3557;
+    color: #ffffff;
+    border-color: #1d3557;
+}
+
+.pg-btn.active {
+    background: #1d3557;
+    color: #ffffff;
+    border-color: #1d3557;
+    font-weight: 600;
+    cursor: default;
+}
+
+.pg-btn.active:hover {
+    background: #1d3557;
+    color: #ffffff;
+}
+
+/* ===============================
+   FILE LINKS
+   =============================== */
+
+.file-link {
+    color: #1d3557;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
 .file-link:hover {
+    color: #16324a;
     text-decoration: underline;
 }
 
-/* RESPONSIVE */
+/* ===============================
+   MODAL STYLING
+   =============================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 3% auto;
+    padding: 30px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1d3557;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d3557;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #999;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* ===============================
+   DETAIL SECTIONS
+   =============================== */
+
+.detail-section {
+    background: #f9fafb;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+}
+
+.detail-row {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.detail-row strong {
+    color: #1d3557;
+    font-weight: 600;
+}
+
+/* ===============================
+   FORM ELEMENTS IN MODAL
+   =============================== */
+
+.modal-content label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #1d3557;
+}
+
+.modal-content select,
+.modal-content textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #cfd3d8;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+    background: #fafafa;
+    font-family: inherit;
+}
+
+.modal-content select:focus,
+.modal-content textarea:focus {
+    border-color: #1d3557;
+    background: #fff;
+}
+
+.modal-content textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ===============================
+   HISTORY ITEMS
+   =============================== */
+
+.history-item {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border-left: 4px solid #1d3557;
+}
+
+.history-item strong {
+    color: #1d3557;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.history-item small {
+    color: #6c757d;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.history-item p {
+    color: #333;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ===============================
+   ALERTS
+   =============================== */
+
+.alert {
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+/* ===============================
+   EMPTY STATE
+   =============================== */
+
+.content-box p[style*="text-align: center"] {
+    padding: 40px 20px;
+    color: #999;
+    font-size: 15px;
+}
+
+/* ===============================
+   RESPONSIVE TABLE (MOBILE)
+   =============================== */
+
 @media (max-width: 768px) {
-    .admin-table {
+    .content-box {
+        padding: 18px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .toolbar select {
+        width: 100%;
+    }
+
+    .admin-table thead,
+    table thead {
+        display: none;
+    }
+
+    .admin-table,
+    .admin-table tbody,
+    .admin-table tr,
+    .admin-table td,
+    table,
+    table tbody,
+    table tr,
+    table td {
+        display: block;
+        width: 100%;
+    }
+
+    .admin-table tr,
+    table tr {
+        margin-bottom: 15px;
+        background: #f8f9fa;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .admin-table td,
+    table td {
+        padding: 8px 0;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        border: none;
+    }
+
+    .admin-table td::before,
+    table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #1d3557;
+        margin-right: 10px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 18px;
+    }
+
+    .close {
+        right: 15px;
+        top: 15px;
+        font-size: 28px;
+    }
+
+    /* Responsive Pagination */
+    .pagination {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .pg-btn {
+        padding: 6px 10px;
         font-size: 13px;
     }
+}
 
-    .detail-box {
-        padding: 16px;
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 18px;
     }
 
-    .detail-box select {
-        width: 100%;
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .pagination {
+        gap: 4px;
+    }
+
+    .pg-btn {
+        padding: 5px 8px;
+        font-size: 12px;
     }
 }

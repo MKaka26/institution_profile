@@ -1,3 +1,6 @@
+/* ===============================
+   PAGE HEADER
+================================ */
 .page-header {
     background: url('../assets/images/slide1.jpeg') no-repeat center center / cover;
     height: 300px;
@@ -32,6 +35,10 @@
     color: #e5e7eb;
 }
 
+
+/* ===============================
+   SECTION
+================================ */
 .section {
     padding: 60px 0;
 }
@@ -47,6 +54,10 @@
     background: #f8fafc;
 }
 
+
+/* ===============================
+   TWO COLUMN LAYOUT
+================================ */
 .two-column {
     display: block !important;
 }
@@ -62,6 +73,10 @@
     margin-bottom: 40px;
 }
 
+
+/* ===============================
+   CARD
+================================ */
 .card {
     background: #ffffff;
     padding: 30px;
@@ -81,6 +96,14 @@
     color: #475569;
 }
 
+.card.text-center {
+    text-align: center;
+}
+
+
+/* ===============================
+   LIST
+================================ */
 .list {
     list-style: none;
     padding: 0;
@@ -103,6 +126,72 @@
     font-weight: bold;
 }
 
+.link-download {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link-download:hover {
+    text-decoration: underline;
+}
+
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin: 15px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.radio-group input[type="radio"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.bukti-source-content {
+    margin-top: 15px;
+}
+
+#uploadBuktiGroup,
+#linkBuktiGroup {
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#uploadBuktiGroup input[type="file"],
+#linkBuktiGroup input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.image-spec {
+    font-size: 13px;
+    color: #666;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/* ===============================
+   FORM
+================================ */
 .gakkum-form {
     background: #ffffff;
     padding: 40px;
@@ -111,14 +200,14 @@
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    font-size: 14px;
+    margin-bottom: 8px;
     color: #0f172a;
 }
 
@@ -134,7 +223,8 @@
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
@@ -142,9 +232,17 @@
 
 .form-group small {
     display: block;
-    margin-top: 6px;
-    font-size: 12px;
     color: #64748b;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
 }
 
 .btn-primary {
@@ -162,6 +260,70 @@
 
 .btn-primary:hover {
     background: var(--primary-hover);
+}
+
+
+/* ===============================
+   SUCCESS BOX
+================================ */
+.success-box {
+    text-align: center;
+    padding: 40px;
+}
+
+.success-box h3 {
+    color: #28a745;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.ticket-display {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border: 2px dashed var(--primary-color);
+}
+
+.ticket-id {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+
+/* ===============================
+   ALERTS
+================================ */
+.alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.alert-centered {
+    max-width: 600px;
+    margin: 30px auto;
 }
 
 
@@ -190,20 +352,203 @@
     color: white;
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tracking-box button:hover {
+    opacity: 0.9;
 }
 
 
 /* ===============================
-   LAYANAN
+   MODAL STYLING (TRACKING)
+================================ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 3% auto;
+    padding: 30px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideDown 0.3s ease;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1d3557;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d3557;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #999;
+    text-decoration: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333;
+}
+
+
+/* ===============================
+   STATUS BADGE (IN MODAL)
+================================ */
+.status-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.status-masuk {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.status-verifikasi-admin {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.status-verifikasi-lapangan {
+    background-color: #fff9c4;
+    color: #f57f17;
+}
+
+.status-selesai {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-ditolak {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+
+/* ===============================
+   DETAIL SECTIONS (IN MODAL)
+================================ */
+.detail-section {
+    background: #f9fafb;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+}
+
+.detail-row {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.detail-row strong {
+    color: #1d3557;
+    font-weight: 600;
+}
+
+
+/* ===============================
+   TIMELINE (IN MODAL)
+================================ */
+.timeline-item {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border-left: 4px solid #1d3557;
+}
+
+.timeline-item strong {
+    color: #1d3557;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.timeline-item small {
+    color: #6c757d;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    color: #333;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* ===============================
+   LAYANAN - CARD GRID
 ================================ */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-}
-
-.card.text-center {
-    text-align: center;
 }
 
 .icon-service {
@@ -217,8 +562,18 @@
     color: var(--primary-color);
     font-weight: 600;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+.link-action:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
 @media (max-width: 768px) {
     .tracking-box {
         flex-direction: column;
@@ -226,5 +581,54 @@
 
     .header-content h1 {
         font-size: 28px;
+    }
+
+    .gakkum-form {
+        padding: 25px;
+    }
+
+    .success-box {
+        padding: 25px;
+    }
+
+    .ticket-id {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+        max-height: 80vh;
+    }
+
+    .modal-content h2 {
+        font-size: 18px;
+    }
+
+    .close {
+        right: 15px;
+        top: 15px;
+        font-size: 28px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 15px;
+    }
+
+    .detail-section {
+        padding: 12px;
     }
 }

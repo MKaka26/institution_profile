@@ -1,66 +1,10 @@
 /* ===============================
-   ADMIN PENGUMUMAN – CLEAN STYLE
-   =============================== */
-/* Flex header: Title + Search Bar */
-.header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 18px;
-}
+   ADMIN AGENDA – MATCH ADMIN PENGUMUMAN
+================================ */
 
-/* Search bar wrapper */
-.search-bar {
-    display: flex;
-    align-items: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    gap: 8px;
-}
-
-/* Search input style (match your theme) */
-.search-input {
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid #cfd3d8;
-    background: #fafafa;
-    font-size: 14px;
-    width: 240px;
-    outline: none;
-    transition: 0.2s;
-}
-
-.search-input:focus {
-    border-color: #1d3557;
-    background: #ffffff;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .header-flex {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .search-bar {
-        width: 100%;
-    }
-
-    .search-input {
-        width: 100%;
-    }
-}
-
-/* WRAPPER CONTENT */
-.content-box {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 14px;
-    margin-bottom: 30px;
-}
-
-/* Title */
+/* ===============================
+   PAGE TITLE & TOOLBAR
+================================ */
 .page-title {
     font-size: 22px;
     font-weight: 600;
@@ -68,7 +12,6 @@
     color: #1d3557;
 }
 
-/* Toolbar */
 .toolbar {
     display: flex;
     justify-content: space-between;
@@ -79,48 +22,26 @@
 }
 
 /* ===============================
-   SEARCH BAR
-   =============================== */
-
-.search-box input {
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid #cfd3d8;
-    width: 240px;
-    font-size: 14px;
-    outline: none;
-    transition: 0.2s;
-    background: #fafafa;
-}
-
-.search-box input:focus {
-    border-color: #1d3557;
-    background: #fff;
-}
-
-/* ===============================
-   TABLE STYLING
-   =============================== */
-
+   TABLE
+================================ */
 table {
     width: 100%;
     border-collapse: collapse;
     border-radius: 10px;
-    margin-top: 10px;
     overflow: hidden;
-    background: white;
+    background: #ffffff;
 }
 
 table thead {
     background: #1d3557;
-    color: #fff;
+    color: #ffffff;
 }
 
 table thead th {
     padding: 12px;
     font-size: 14px;
     font-weight: 500;
-    text-align: center;
+    text-align: left;
 }
 
 table tbody tr {
@@ -136,12 +57,44 @@ table tbody td {
     padding: 12px;
     font-size: 14px;
     color: #333;
+    vertical-align: middle;
+    text-align: center;
 }
 
 /* ===============================
-   BUTTONS
-   =============================== */
+   TABLE ALIGNMENT (CENTER FIX)
+================================ */
 
+/* Header table ke tengah */
+table thead th {
+    text-align: center;
+}
+
+/* Kolom Judul tetap kiri (lebih rapi dibaca) */
+/* table tbody td:nth-child(3) {
+    text-align: left;
+} */
+
+/* Aksi tombol tetap rapi di tengah */
+.action-btns {
+    justify-content: center;
+}
+
+
+/* ===============================
+   IMAGE THUMBNAIL
+================================ */
+.thumb {
+    width: 90px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+/* ===============================
+   BUTTONS (KONSISTEN)
+================================ */
 .btn {
     padding: 8px 16px;
     border-radius: 8px;
@@ -151,6 +104,7 @@ table tbody td {
     transition: 0.2s ease-in-out;
     display: inline-block;
     text-align: center;
+    font-weight: 600;
 }
 
 .btn-primary {
@@ -160,15 +114,6 @@ table tbody td {
 
 .btn-primary:hover {
     background: #16324a;
-}
-
-.btn-secondary {
-    background-color: #e63946;
-    color: #fff;
-}
-
-.btn-secondary:hover {
-    background-color: #c71f2a;
 }
 
 .btn-warning {
@@ -189,28 +134,18 @@ table tbody td {
     background: #c71f2a;
 }
 
-.btn-cancel {
-    background: #6c757d;
-    color: white;
-}
-
-.btn-cancel:hover {
-    background: #5a636a;
-}
-
 .action-btns {
     display: flex;
     gap: 8px;
 }
 
-.btn-primary, .btn-edit, .btn-warning, .btn-warning:hover, .btn-danger, .btn-danger:hover{
+.btn-warning, .btn-warning:hover, .btn-danger, .btn-danger:hover{
     text-decoration: none;
 }
 
 /* ===============================
-   FORM SECTION
-   =============================== */
-
+   FORM BOX
+================================ */
 .form-box {
     margin-top: 25px;
     padding: 20px;
@@ -226,6 +161,9 @@ table tbody td {
     margin-bottom: 18px;
 }
 
+/* ===============================
+   FORM GROUP
+================================ */
 .form-group {
     margin-bottom: 18px;
 }
@@ -257,17 +195,68 @@ table tbody td {
     background: #fff;
 }
 
-/* File description */
-.file-info {
-    font-size: 13px;
-    color: #6f6f6f;
-    margin-top: 6px;
+.form-group textarea {
+    resize: vertical;
+}
+
+/* ===============================
+   IMAGE PREVIEW
+================================ */
+#preview-gambar,
+.form-group img.thumb {
+    margin-top: 10px;
+    max-height: 220px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    object-fit: cover;
+}
+
+/* ===============================
+   GALERI ITEM
+================================ */
+.gallery-item-box {
+    border: 1px dashed #e5e7eb;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #fafafa;
+}
+
+.gallery-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery-item input[type="file"] {
+    flex: 1;
+}
+
+/* ===============================
+   RADIO BUTTON
+================================ */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.radio-item input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
 }
 
 /* ===============================
    PAGINATION
-   =============================== */
-
+================================ */
 .pagination {
     margin-top: 20px;
     display: flex;
@@ -289,15 +278,15 @@ table tbody td {
     background: #dcdcdc;
 }
 
-.pagination .active {
+.pagination a.active {
     background: #1d3557;
     color: white;
+    pointer-events: none;
 }
 
 /* ===============================
-   RESPONSIVE TABLE (MOBILE)
-   =============================== */
-
+   RESPONSIVE
+================================ */
 @media (max-width: 768px) {
     table thead {
         display: none;
@@ -336,50 +325,4 @@ table tbody td {
         justify-content: flex-end;
         margin-top: 10px;
     }
-
-    .search-box input {
-        width: 100%;
-    }
 }
-
-/* Header Flex */
-.header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-/* Search bar styling */
-.search-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.search-bar input[type="text"] {
-    width: 250px;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-.radio-group {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 10px;
-}
-
-.radio-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;              /* JARAK RADIO & TEKS */
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.radio-item input[type="radio"] {
-    margin: 0;
-    cursor: pointer;
-}
-
