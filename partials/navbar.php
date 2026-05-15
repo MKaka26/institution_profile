@@ -10,7 +10,7 @@
                 <img src="<?= $base_url ?>/assets/icons/new_KLH_GAKKUM.png" alt="Logo GAKKUM LH dan KLH">
             </a>
             <div class="logo-text">
-                <span>Balai GakKum LH Wilayah Sumatera</span>
+                <span>Balai Gakum LH Wilayah Sumatera</span>
                 <strong>SEKSI WILAYAH II PALEMBANG</strong>
             </div>
         </div>
@@ -27,10 +27,11 @@
                     Profil <span class="arrow">▾</span>
                 </a>
                 <div class="dropdown">
-                    <a href="<?= $base_url ?>index.php#tentang">Tentang LH</a>
+                    <a href="<?= $base_url ?>index.php#tentang">Tentang Gakkum LH</a>
                     <a href="<?= $base_url ?>index.php#visi-misi">Visi & Misi</a>
                     <a href="<?= $base_url ?>index.php#tugas">Tugas & Fungsi</a>
-                    <a href="<?= $base_url ?>index.php#struktur">Struktur Organisasi</a>
+                    <!-- <a href="<?= $base_url ?>index.php#struktur">Struktur Organisasi</a> -->
+                    <a href="<?= $base_url ?>assets/images/STRUKTURAL_GAKKUM.png">Struktur Organisasi</a>
                 </div>
             </div>
 
@@ -42,8 +43,11 @@
                 <div class="dropdown">
                     <a href="<?= $base_url ?>pages/berita.php">Berita</a>
                     <a href="<?= $base_url ?>pages/pengumuman.php">Pengumuman</a>
-                    <a href="<?= $base_url ?>pages/informasi-publik.php#dokumen">Dokumen</a>
-                    <a href="<?= $base_url ?>pages/informasi-publik.php#galeri">Galeri</a>
+                    <a href="<?= $base_url ?>pages/siaran.php">Siaran Pers</a>
+                    <!-- <a href="<?= $base_url ?>pages/pengumuman.php">Pengumuman</a> -->
+                    <a href="<?= $base_url ?>pages/agenda.php">Agenda</a>
+                    <!-- <a href="<?= $base_url ?>pages/informasi-publik.php#dokumen">Dokumen</a> -->
+                    <!-- <a href="<?= $base_url ?>pages/informasi-publik.php#galeri">Galeri</a> -->
                 </div>
             </div>
 
@@ -54,8 +58,8 @@
                 </a>
                 <div class="dropdown">
                     <a href="<?= $base_url ?>pages/layanan_pengaduan.php#pengaduan">Pengaduan Masyarakat</a>
-                    <a href="<?= $base_url ?>pages/layanan-pengaduan.php#layanan">Layanan Online</a>
-                    <a href="<?= $base_url ?>pages/layanan-pengaduan.php#tracking">Tracking Pengaduan</a>
+                    <!-- <a href="<?= $base_url ?>pages/layanan-pengaduan.php#layanan">Layanan Online</a> -->
+                    <a href="<?= $base_url ?>pages/layanan_pengaduan.php#tracking">Tracking Pengaduan</a>
                 </div>
             </div>
         </nav>
